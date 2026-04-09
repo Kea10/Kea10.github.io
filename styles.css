@@ -1,0 +1,144 @@
+/* 
+ * Minimalist Academic Profile CSS
+ * Styled to resemble a clean, modern physics pre-print (LaTeX style)
+ */
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --link-color: #1a0dab;
+    --link-hover-color: #11086a;
+    --font-stack: "Lora", "Merriweather", "Times New Roman", Georgia, serif;
+    --max-width: 800px;
+    --btn-border: #333333;
+    --btn-hover-bg: #f5f5f5;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-stack);
+    font-size: 1.1rem; /* 17.6px base */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Centered maximum-width container */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Typography & Layout */
+h1 {
+    font-size: 2.2rem;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 0.3em;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.2em;
+    text-align: justify;
+}
+
+.email {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2em;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* Publications List */
+ul {
+    padding-left: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+/* Minimalist CV Button */
+.cv-container {
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+}
+
+.btn-cv {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: var(--font-stack);
+    color: var(--text-color);
+    background-color: transparent;
+    border: 1px solid var(--btn-border);
+    border-radius: 4px; /* Slight rounding for modern feel */
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-cv:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.btn-cv:active {
+    transform: scale(0.98);
+}
+
+/* Footer styling */
+footer {
+    margin-top: 4em;
+    padding-top: 1em;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666666;
+    border-top: 1px solid #eaeaea;
+}
+
+/* Responsive considerations */
+@media (max-width: 600px) {
+    body {
+        font-size: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        text-align: left; /* Justified text on very small screens can be hard to read */
+    }
+}
