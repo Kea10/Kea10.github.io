@@ -9,45 +9,82 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Keaten Wood</h1>
-            <p class="email"><a href="mailto:klwood2@asu.edu">klwood2@asu.edu</a></p>
-            <div class="cv-container">
-                <a href="KeatenWood_Resume4-2026.pdf" class="btn-cv" target="_blank" rel="noopener noreferrer">Download CV</a>
+        <div class="two-column-layout">
+            <div class="left-column">
+                <header>
+                    <div class="profile-pic-container">
+                        <img src="profile.png" alt="Keaten Wood" class="profile-pic">
+                    </div>
+                    <h1>Keaten Wood</h1>
+                    <p class="email"><a href="mailto:klwood2@asu.edu">klwood2@asu.edu</a></p>
+                    <p class="subtitle">PhD Candidate</p>
+                    <p class="subtitle">Arizona State University Department of Cosmology</p>
+                    <div class="cv-container">
+                        <a href="KeatenWood_Resume4-2026.pdf" class="btn-cv" target="_blank" rel="noopener noreferrer">Download CV</a>
+                    </div>
+                </header>
+
+                <section id="about">
+                    <h2>About</h2>
+                    <p>My primary research focuses on the development of highly sensitive Rb-Xe-He comagnetometers which utilize 
+                        SQUIDS (Superconducting Quantum Interference Devices) to achieve precision measurements
+                         of fundamental physics such as dark matter and axion searches. </p>
+                </section>
+
+                <section id="publications">
+                    <h2>Publications & Talks</h2>
+                    <ul>
+                        <li>
+                            <strong>Advances in nuclear spin coherent control, and in SQUID design, for a new measurement of the xenon-129 EDM.</strong>
+                            <br>
+                            <em>DAMOP</em> (2026)
+                        </li>
+                        <!-- Add more publications and talks here -->
+                    </ul>
+                </section>
+
+                <footer>
+                    <p>&copy; 2026 Keaten Wood.</p>
+                </footer>
             </div>
-        </header>
 
-        <main>
-            <section id="about">
-                <h2>About</h2>
-                <p>I am a PhD student at the ASU Department of Physics. 
-                    My primary research focuses on the development of highly sensitive Rb-Xe-He comagnetometers which utilize 
-                    SQUIDS (Superconducting Quantum Interference Devices) to achieve precision measurements
-                     of fundamental physics such as dark matter and axion searches. </p>
-            </section>
+            <div class="right-column">
+                <main>
+                    <section id="squid_summary">
+                        <h2>Detecting Ultralight Axions with SQUID Magnetometers</h2>
+                        <div class="content-row">
+                            <img src="SQUID_Diagram.png" alt="SQUID Magnetometer Diagram" class="section-img">
+                            <p> I have the wonderful privledge and responsibility of being a core designer, constructor, and developer of my labs SQUID Comagnetometer experiment, which is set to start taking data before the end of 2026.
+                                I have designed several aspects of the experimental structure, including the custom mumetal magnetic shielding, custom field coils, and the squid detection coil loops. 
+                                I have also contributed significantly to the control and analysis software which will be crutial to the experiment.
+                            </p>
+                        </div>
+                    </section>
 
-            <section id="theory">
-                <h2>Theory</h2>
-                <p>Alongside instrumentation, I maintain active research in theoretical cosmology, 
-                    specifically calculating Next-to-Leading-Log (NLL) corrections to stochastic inflation in de-Sitter space.</p>
-            </section>
+                    <section id="quantum_control">
+                        <h2>Error-Correcting Pulses for co-located Spin Ensembles without Frequency Selectivity</h2>
+                        <div class="content-row">
+                            <img src="Quantum_Control_Diagram.png" alt="Quantum Control Diagram" class="section-img">
+                            <p>The precision of tipping pulses have been estimated to be a core limiter in precision physics experiments such as Xenon-129 EDM. It is crutial to build pulses that simultaneously tip Xenon-129 and Helium-3 
+                                without relying on reasonant-style frequency selectivity which makes the control sequences much too long for current operating fields. 
+                                I design sharp magnetic field pulses that are not only robust to magnetic field drifts, but remain within an order of magnitude of the quantum speed limit. 
+                                I demonstrate millirad-level precision in this new pulse scheme, setting the stage for a 30-fold increase in measurement sensitivity.
+                            </p>
+                        </div>
+                    </section>
 
-            <section id="publications">
-                <h2>Publications & Talks</h2>
-                <ul>
-                    <li>
-                        <strong>Advances in nuclear spin coherent control, and in SQUID design, for a new measurement of the xenon-129 EDM.</strong>
-                        <br>
-                        <em>DAMOP</em> (2026)
-                    </li>
-                    <!-- Add more publications and talks here -->
-                </ul>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2026 Keaten Wood.</p>
-        </footer>
+                    <section id="theory">
+                        <h2>Are Cosmological Spacetimes Quantum Mechanically Stable?</h2>
+                        <div class="content-row">
+                            <img src="DS_Diagram.png" alt="De-Sitter Space Diagram" class="section-img">
+                            <p>I maintain active research in theoretical cosmology, specifically stochastic inflation. 
+                                I leverage a reinterpretation of the time derivative as a morphism on Feynman diagrams in order to compute Next-to-Leading-Log corrections to the Starobinsky's Fokker-Plank Equation. 
+                            I also provide the NLL corrections to distance-separated scalar correlations, as well as a clear pathway to compute further corrections and what these terms should look like.</p>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -9,7 +9,7 @@
     --link-color: #1a0dab;
     --link-hover-color: #11086a;
     --font-stack: "Lora", "Merriweather", "Times New Roman", Georgia, serif;
-    --max-width: 800px;
+    --max-width: 1200px;
     --btn-border: #333333;
     --btn-hover-bg: #f5f5f5;
 }
@@ -31,6 +31,72 @@ body {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 40px 20px;
+}
+
+/* Two Column Layout */
+.two-column-layout {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.left-column {
+    flex: 0 0 35%;
+    position: sticky;
+    top: 40px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    /* Hide scrollbar for a cleaner look */
+    scrollbar-width: none; /* Firefox */
+}
+
+.left-column::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.right-column {
+    flex: 1;
+}
+
+.right-column section:first-child h2 {
+    margin-top: 0;
+}
+
+/* Profile Picture */
+.profile-pic-container {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #eaeaea;
+}
+
+/* Section Content Row */
+.content-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 1.5em;
+}
+
+.content-row p {
+    width: 100%;
+    margin-top: 0;
+}
+
+/* Section Images */
+.section-img {
+    max-height: 33vh;
+    width: auto;
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* Typography & Layout */
@@ -60,7 +126,16 @@ p {
 .email {
     text-align: center;
     font-size: 1.1rem;
-    margin-bottom: 2em;
+    margin-bottom: 0.5em;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 0.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 a {
@@ -125,7 +200,19 @@ footer {
 }
 
 /* Responsive considerations */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
+    .two-column-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .left-column {
+        position: static;
+        max-height: none;
+        overflow-y: visible;
+        flex: auto;
+    }
+
     body {
         font-size: 1rem;
     }
@@ -140,5 +227,9 @@ footer {
 
     p {
         text-align: left; /* Justified text on very small screens can be hard to read */
+    }
+
+    p.email, p.subtitle {
+        text-align: center;
     }
 }
