@@ -99,6 +99,23 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.image-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.image-row .section-img {
+    flex: 1 1 0;
+    max-width: calc(50% - 10px);
+    min-width: 0;
+    object-fit: contain;
+}
+
 /* Typography & Layout */
 h1 {
     font-size: 2.2rem;
