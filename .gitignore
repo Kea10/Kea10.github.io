@@ -1,0 +1,6 @@
+# Local-only drafts (not published)
+_local/
+
+# Adiabatic rubidium diagrams (kept locally under _local/adiabatic/)
+unnamed.png
+unnamed (1).png
